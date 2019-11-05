@@ -11,6 +11,8 @@ import limited from '../views/tabs/limits/limit-limit'
 import limitShop from '../views/tabs/limits/limit-shop'
 import limitVolume from '../views/tabs/limits/limit-volume'
 import limitSeckil from '../views/tabs/limits/limit-seckil'
+
+import sorthome from '../views/tabs/sort/sort-home'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 let router = new VueRouter({
@@ -25,15 +27,19 @@ let router = new VueRouter({
             //子路由
             children:[
                 {path:'',component:home},
-                {path:'sort',component:sort},
-                {path:'limit/limited',redirect:'limit'},
+                {path:'sort',component:sort,
+                    children:[
+                        {path:'sorthome',component:sorthome}
+                    ]
+                },
                 {path:'limit',component:limit,
                     children:[
-                        {path:'',component:limited},
+                        {path:'limited',component:limited},
                         {path:'limitShop',component:limitShop},
                         {path:'limitVolume',component:limitVolume},
                         {path:'limitSeckil',component:limitSeckil}
-                    ]},
+                    ]
+                },
                 {path:'cart',component:cart},
                 {path:'my',component:my}
             ]
@@ -47,8 +53,6 @@ let router = new VueRouter({
 
 // // 全局路由guard     前置guard user->main->login
 // router.beforeEach((to,from,next)=>{
-//     // eslint-disable-next-line no-console
-//     console.log(to.path,from.path);
 //     // to from $route
 //     // let token = localStorage.getItem('token')
 //     next()

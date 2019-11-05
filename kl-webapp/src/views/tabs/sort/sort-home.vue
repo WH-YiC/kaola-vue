@@ -1,0 +1,162 @@
+<template>
+    <div>
+        <div :key="index" v-for="(s,index) in footerNav.sortNav.sort">
+            <h3>{{s.name}}</h3>
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: "sort-home",
+        data(){
+            return{
+                footerNav:{
+                    sortNav:[
+                        {
+                            name:"美容彩妆",
+                            url:'#/',
+                            sort:[
+                                {
+                                    name:'畅销星品',
+                                    products:[
+                                        {
+                                            name:'口红',
+                                            pic:require('../../../assets/images/sort1.png')
+                                        },
+                                        {
+                                            name:'面膜',
+                                            pic:require('../../../assets/images/sort2.png')
+                                        },
+                                        {
+                                            name:'面膜大赏',
+                                            pic:require('../../../assets/images/sort3.png')
+                                        },
+                                        {
+                                            name:'防晒',
+                                            pic:require('../../../assets/images/sort4.png')
+                                        },
+                                        {
+                                            name:'洗面奶',
+                                            pic:require('../../../assets/images/sort5.png')
+                                        },
+                                        {
+                                            name:'眼霜',
+                                            pic:require('../../../assets/images/sort6.png')
+                                        },
+                                        {
+                                            name:'香水',
+                                            pic:require('../../../assets/images/sort1.png')
+                                        },
+                                        {
+                                            name:'眼影',
+                                            pic:require('../../../assets/images/sort1.png')
+                                        },
+                                        {
+                                            name:'气垫',
+                                            pic:require('../../../assets/images/sort1.png')
+                                        },
+                                        {
+                                            name:'卸妆',
+                                            pic:require('../../../assets/images/sort1.png')
+                                        },
+                                        {
+                                            name:'口红种草',
+                                            pic:require('../../../assets/images/sort1.png')
+                                        }
+                                    ]
+                                }
+                            ],
+                        },
+                        {
+                            name:"奶粉/纸尿裤",
+                            url:'#'
+                        },
+                        {
+                            name:"母婴专区",
+                            url:'#'
+                        },
+                        {
+                            name:"营养保健",
+                            url:'#'
+                        },
+                        {
+                            name:"数码家电",
+                            url:'#'
+                        },
+                        {
+                            name:"个人洗护",
+                            url:'#'
+                        },
+                        {
+                            name:"服饰鞋靴",
+                            url:'#'
+                        },
+                        {
+                            name:"运动户外",
+                            url:'#'
+                        },
+                        {
+                            name:"手表配饰",
+                            url:'#'
+                        },
+                        {
+                            name:"轻奢",
+                            url:'#'
+                        },
+                        {
+                            name:"家居生活",
+                            url:'#'
+                        },
+                        {
+                            name:"环球美食",
+                            url:'#'
+                        },
+                        {
+                            name:"全球工厂店",
+                            url:'#'
+                        },
+                        {
+                            name:"海外旗舰",
+                            url:'#'
+                        },
+                        {
+                            name:"网易严选",
+                            url:'#'
+                        },
+                        {
+                            name:"海外商超",
+                            url:'#'
+                        },
+                        {
+                            name:"生鲜",
+                            url:'#'
+                        },
+                        {
+                            name:"充值中心",
+                            url:'#'
+                        },
+                        {
+                            name:"宠物生活",
+                            url:'#'
+                        }
+                    ]
+                },
+            }
+        }
+    }
+</script>
+
+<style scoped>
+    h3{
+        font-size: 0.14rem;
+        line-height: 0.30rem;
+        height: 0.30rem;
+        margin-bottom: 0.08rem;
+        font-family: PingFangSC-Semibold;
+        color: #333;
+        letter-spacing: 0;
+        font-weight: 700;
+        padding-left: 0.15rem;
+    }
+</style>

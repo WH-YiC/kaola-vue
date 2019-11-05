@@ -1,13 +1,13 @@
 <template>
     <div>
-        <router-view></router-view>
+        <router-view class="home"></router-view>
         <kl-footer></kl-footer>
     </div>
 
 </template>
 
 <script>
-    import footer from '../views/tabs/footer'
+    import footer from '../components/footer'
     export default {
         name: "kmain",
         components: {
@@ -17,5 +17,7 @@
 </script>
 
 <style scoped>
-
+.home{
+    margin-bottom: 0.5rem;
+}
 </style>

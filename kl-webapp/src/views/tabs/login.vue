@@ -1,10 +1,10 @@
 <template>
-    <h1>limit</h1>
+    
 </template>
 
 <script>
     export default {
-        name: "limit-limit"
+        name: ""
     }
 </script>
 

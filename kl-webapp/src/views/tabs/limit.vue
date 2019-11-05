@@ -1,10 +1,12 @@
 <template>
+    <div>
     <router-view></router-view>
     <limit-footer></limit-footer>
+    </div>
 </template>
 
 <script>
-    import limitFooter from './limits/limit-footer'
+    import limitFooter from '../../components/limit-footer'
     export default {
         name: "limit",
         components:{

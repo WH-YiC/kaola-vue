@@ -1,5 +1,5 @@
 <template>
-    <h1>1234</h1>
+    <h1>limitShop</h1>
 </template>
 
 <script>
