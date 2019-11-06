@@ -1,146 +1,246 @@
 <template>
     <div>
-        <div :key="index" v-for="(s,index) in footerNav.sortNav.sort">
+        <div class="sort-home-product" :key="index" v-for="(s,index) in footerNav.sort">
             <h3>{{s.name}}</h3>
+            <sort-home-item :data="s.products"></sort-home-item>
         </div>
     </div>
 </template>
 
 <script>
+    import sortHomeItem from '../../../components/sort-home-item'
     export default {
         name: "sort-home",
+        components:{
+            sortHomeItem
+        },
         data(){
             return{
                 footerNav:{
-                    sortNav:[
+                    sort:[
                         {
-                            name:"美容彩妆",
-                            url:'#/',
-                            sort:[
+                            name:'畅销星品',
+                            products:[
                                 {
-                                    name:'畅销星品',
-                                    products:[
-                                        {
-                                            name:'口红',
-                                            pic:require('../../../assets/images/sort1.png')
-                                        },
-                                        {
-                                            name:'面膜',
-                                            pic:require('../../../assets/images/sort2.png')
-                                        },
-                                        {
-                                            name:'面膜大赏',
-                                            pic:require('../../../assets/images/sort3.png')
-                                        },
-                                        {
-                                            name:'防晒',
-                                            pic:require('../../../assets/images/sort4.png')
-                                        },
-                                        {
-                                            name:'洗面奶',
-                                            pic:require('../../../assets/images/sort5.png')
-                                        },
-                                        {
-                                            name:'眼霜',
-                                            pic:require('../../../assets/images/sort6.png')
-                                        },
-                                        {
-                                            name:'香水',
-                                            pic:require('../../../assets/images/sort1.png')
-                                        },
-                                        {
-                                            name:'眼影',
-                                            pic:require('../../../assets/images/sort1.png')
-                                        },
-                                        {
-                                            name:'气垫',
-                                            pic:require('../../../assets/images/sort1.png')
-                                        },
-                                        {
-                                            name:'卸妆',
-                                            pic:require('../../../assets/images/sort1.png')
-                                        },
-                                        {
-                                            name:'口红种草',
-                                            pic:require('../../../assets/images/sort1.png')
-                                        }
-                                    ]
+                                    name:'口红',
+                                    pic:'./images/sort1.png'
+                                },
+                                {
+                                    name:'面膜',
+                                    pic:'./images/sort2.png'
+                                },
+                                {
+                                    name:'面膜大赏',
+                                    pic:'./images/sort3.png'
+                                },
+                                {
+                                    name:'防晒',
+                                    pic:'./images/sort4.png'
+                                },
+                                {
+                                    name:'洗面奶',
+                                    pic:'./images/sort5.png'
+                                },
+                                {
+                                    name:'眼霜',
+                                    pic:'./images/sort6.png'
+                                },
+                                {
+                                    name:'香水',
+                                    pic:'https://haitao.nosdn1.127.net/onlineih1cldcu11053.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'眼影',
+                                    pic:'https://haitao.nosdn1.127.net/izqyc2fj45_800_800.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'气垫',
+                                    pic:'https://haitao.nosdn1.127.net/1blereva030_800_800.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'卸妆',
+                                    pic:'https://haitao.nosdn2.127.net/f192f2db1d2843509c155af9435c76641527242104530jhlsiloo10624.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'口红种草',
+                                    pic:'https://haitao.nosdn1.127.net/jpux32bk71null.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
                                 }
-                            ],
+                            ]
                         },
                         {
-                            name:"奶粉/纸尿裤",
-                            url:'#'
+                            name:'美容护肤',
+                            products:[
+                                {
+                                    name:'面部清洁',
+                                    pic:'https://haitao.nosdn1.127.net/ipbyqbwy44_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'化妆水',
+                                    pic:'https://haitao.nosdn1.127.net/ipbyql7q47_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'面膜',
+                                    pic:'https://haitao.nosdn1.127.net/ipbyqpqd46_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'面霜',
+                                    pic:'https://haitao.nosdn1.127.net/ipbyqut060_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'乳液',
+                                    pic:'https://haitao.nosdn1.127.net/ipbyr0007_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'喷雾',
+                                    pic:'https://haitao.nosdn1.127.net/ipbyr50q5_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'面部精华',
+                                    pic:'https://haitao.nosdn1.127.net/ipbyrauc32_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'唇部护理',
+                                    pic:'https://haitao.nosdn1.127.net/ipbyrg5145_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'防晒修复',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdnbld0_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'眼部护理',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdnh6w78_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'T区护理',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdnrmd28_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'护肤套装',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdnyvg7_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'干皮救星',
+                                    pic:'https://haitao.nosdn1.127.net/jpux4r8z72null.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                }
+                            ]
                         },
                         {
-                            name:"母婴专区",
-                            url:'#'
+                            name:'彩妆香氛',
+                            products:[
+                                {
+                                    name:'唇妆',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdp3l216_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'眼妆',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdp8257_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'精油',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdpcsm2_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'美甲',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdpigg38_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'美容工具',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdpnh734_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'香水',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdpsmx32_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'面部彩妆',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdq39p31_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'底妆',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdq8ch83_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'彩妆套装',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdqcxq94_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                }
+                            ]
                         },
                         {
-                            name:"营养保健",
-                            url:'#'
+                            name:'身体护理',
+                            products:[
+                                {
+                                    name:'手部护理',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdqosy8_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'胸部护理',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdqt8n90_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'足部护理',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdqxvi52_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name: '身体乳/霜',
+                                    pic: 'https://haitao.nosdn1.127.net/ipcdra7574_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'脱毛膏',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdrgz481_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'止汗/去异味',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdrn4566_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'磨砂/去角质',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdrtuu47_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'身体护理套装',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdrytu79_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'颈部护理',
+                                    pic:'https://haitao.nosdn1.127.net/isfgqfxf20_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                }
+                            ]
                         },
                         {
-                            name:"数码家电",
-                            url:'#'
-                        },
-                        {
-                            name:"个人洗护",
-                            url:'#'
-                        },
-                        {
-                            name:"服饰鞋靴",
-                            url:'#'
-                        },
-                        {
-                            name:"运动户外",
-                            url:'#'
-                        },
-                        {
-                            name:"手表配饰",
-                            url:'#'
-                        },
-                        {
-                            name:"轻奢",
-                            url:'#'
-                        },
-                        {
-                            name:"家居生活",
-                            url:'#'
-                        },
-                        {
-                            name:"环球美食",
-                            url:'#'
-                        },
-                        {
-                            name:"全球工厂店",
-                            url:'#'
-                        },
-                        {
-                            name:"海外旗舰",
-                            url:'#'
-                        },
-                        {
-                            name:"网易严选",
-                            url:'#'
-                        },
-                        {
-                            name:"海外商超",
-                            url:'#'
-                        },
-                        {
-                            name:"生鲜",
-                            url:'#'
-                        },
-                        {
-                            name:"充值中心",
-                            url:'#'
-                        },
-                        {
-                            name:"宠物生活",
-                            url:'#'
+                            name:'男士护肤',
+                            products:[
+                                {
+                                    name:'男士洁面',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdsdqd6_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'男士爽肤水',
+                                    pic:'https://haitao.nosdn1.127.net/isfihew975_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'男士面膜',
+                                    pic:'https://haitao.nosdn1.127.net/isfhfko540_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'男士眼霜',
+                                    pic:'https://haitao.nosdn1.127.net/isfgxy4w4_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'男士面部乳霜',
+                                    pic:'https://haitao.nosdn1.127.net/ipcdslky85_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'男士面部精华',
+                                    pic:'https://haitao.nosdn1.127.net/isfili4s11_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                },
+                                {
+                                    name:'男士防晒',
+                                    pic:'https://haitao.nosdn1.127.net/isffjb6r2_180_180.jpg?imageView&thumbnail=240x240&quality=75&type=webp'
+                                }
+                            ]
                         }
-                    ]
+                    ],
+
                 },
             }
         }
@@ -157,6 +257,10 @@
         color: #333;
         letter-spacing: 0;
         font-weight: 700;
-        padding-left: 0.15rem;
+        padding-left: 0.03rem;
+    }
+    .sort-home-product{
+        padding-bottom: 0.07rem;
+        border-bottom: 0.005rem solid #f0f0f0;
     }
 </style>

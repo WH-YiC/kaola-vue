@@ -10,7 +10,7 @@
         data () {
             return {
                 footerNav:{
-                    homeNav:[require('../assets/images/home-center-nav1.png'),require('../assets/images/home-center-nav2.png'),require('../assets/images/home-center-nav3.png'),require('../assets/images/home-center-nav4.png'),require('../assets/images/home-center-nav5.png'),require('../assets/images/home-center-nav6.png'),require('../assets/images/home-center-nav7.png'),require('../assets/images/home-center-nav8.png'),require('../assets/images/home-center-nav9.png'),require('../assets/images/home-center-nav10.png')]
+                    homeNav:['./images/home-center-nav1.png','./images/home-center-nav2.png','./images/home-center-nav3.png','./images/home-center-nav4.png','./images/home-center-nav5.png','./images/home-center-nav6.png','./images/home-center-nav7.png','./images/home-center-nav8.png','./images/home-center-nav9.png','./images/home-center-nav10.png']
                 }
             }
         }

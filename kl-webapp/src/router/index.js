@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import main from '../views/main'
-import helloworld from '../components/HelloWorld'
 import home from '../views/tabs/home'
 import sort from '../views/tabs/sort'
 import limit from '../views/tabs/limit'
@@ -43,10 +42,6 @@ let router = new VueRouter({
                 {path:'cart',component:cart},
                 {path:'my',component:my}
             ]
-        },
-        {
-            path: '/helloworld',
-            component: helloworld
         }
     ]
 })

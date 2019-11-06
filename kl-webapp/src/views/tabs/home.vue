@@ -8,8 +8,20 @@
         <kl-banner></kl-banner>
         <img class="home-center-img" src="../../assets/images/home-center-nav.png"/>
         <home-center-nav></home-center-nav>
-        <img class="home-center-img" src="../../assets/images/home1.gif" alt="">
+        <img class="home-center-img" src="../../assets/images/home1.gif"/>
+        <img class="home-center-img" src="../../assets/images/homeimg.png"/>
         <home-center-img></home-center-img>
+        <div class="home-list">
+            <a href="#"><img src="../../assets/images/home-list1-1.png"/></a>
+            <a href="#"><img src="../../assets/images/home-list1-2.png"/></a>
+            <a href="#"><img src="../../assets/images/home-list1-3.png"/></a>
+        </div>
+        <div class="home-list">
+            <a href="#"><img src="../../assets/images/home-list2-1.png"/></a>
+            <a href="#"><img src="../../assets/images/home-list2-2.png"/></a>
+            <a href="#"><img src="../../assets/images/home-list2-3.png"/></a>
+            <a href="#"><img src="../../assets/images/home-list2-4.png"/></a>
+        </div>
     </div>
 </template>
 
@@ -69,6 +81,15 @@
         font-size: 10px;
     }
     .home-center-img{
+        width: 100%;
+    }
+    .home-list{
+        display: flex;
+    }
+    .home-list>a{
+        flex: 1;
+    }
+    .home-list img{
         width: 100%;
     }
 </style>

@@ -15,7 +15,7 @@
         data () {
             return {
                 footerNav:{
-                    banner:[require('../assets/images/1.png'),require('../assets/images/2.png'),require('../assets/images/3.png'),require('../assets/images/4.png'),require('../assets/images/5.png'),require('../assets/images/6.png'),require('../assets/images/7.png'),require('../assets/images/8.png'),require('../assets/images/9.png')]
+                    banner:['./images/1.png','./images/2.png','./images/3.png','./images/4.png','./images/5.png','./images/6.png','./images/7.png','./images/8.png','./images/9.png']
                 }
             }
         },

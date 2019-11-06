@@ -10,7 +10,7 @@
         data () {
             return {
                 footerNav:{
-                    homeNav2:[require('../assets/images/home2-1.png'),require('../assets/images/home2-2.png'),require('../assets/images/home2-3.png')]
+                    homeNav2:['./images/home2-1.png','./images/home2-2.png','./images/home2-3.png']
                 }
             }
         }

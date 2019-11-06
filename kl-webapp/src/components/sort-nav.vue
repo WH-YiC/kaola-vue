@@ -1,5 +1,4 @@
 <template>
-    <div>
         <ul>
             <li :key="index" v-for="(s,index) in footerNav.sortNav" @click="handleclick(index)">
                 <a :class="current===index?'click':''" :href="s.url">
@@ -7,7 +6,6 @@
                 </a>
             </li>
         </ul>
-    </div>
 </template>
 
 <script>
@@ -107,6 +105,7 @@
 </script>
 
 <style scoped>
+
     ul{
         width: 1rem;
         text-align: center;

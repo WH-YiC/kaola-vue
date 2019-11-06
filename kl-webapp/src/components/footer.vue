@@ -15,32 +15,32 @@
                     tabs:[
                         {
                             name:"首页",//home
-                            normalPic:require('../assets/images/home.png'),
-                            activePic:require('../assets/images/home-active.png'),
+                            normalPic:'./images/home.png',
+                            activePic:'./images/home-active.png',
                             url:'#/'
                         },
                         {
                             name:"分类",//sort
-                            normalPic:require('../assets/images/sort.png'),
-                            activePic:require('../assets/images/sort-active.png'),
+                            normalPic:'./images/sort.png',
+                            activePic:'./images/sort-active.png',
                             url:'#/main/sort/sortHome'
                         },
                         {
                             name:"限时购",//limit
-                            normalPic:require('../assets/images/limit.png'),
-                            activePic:require('../assets/images/limit.png'),
+                            normalPic:'./images/limit.png',
+                            activePic:'./images/limit.png',
                             url:'#/main/limit/limited'
                         },
                         {
                             name:"购物车",//cart
-                            normalPic:require('../assets/images/cart.png'),
-                            activePic:require('../assets/images/cart-active.png'),
+                            normalPic:'./images/cart.png',
+                            activePic:'./images/cart-active.png',
                             url:'#/main/cart'
                         },
                         {
                             name:"我的考拉",//my
-                            normalPic:require('../assets/images/my.png'),
-                            activePic:require('../assets/images/my-active.png'),
+                            normalPic:'./images/my.png',
+                            activePic:'./images/my-active.png',
                             url:'#/main/my'
                         }
                     ]
