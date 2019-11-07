@@ -11,27 +11,46 @@
         <main>
             <div>
                 <h1>今日必抢</h1>
-                <div class="day-shopping">
-                    <div>
-                        <img src="https://pop.nosdn.127.net/78e7949c-ded2-4c21-af48-8fef64a24344?imageView&thumbnail=260x260&quality=80&type=webp" alt="">
-                    </div>
-                    <div class="day-shopping-list">
-                        <h2>超韧湿水不易破</h2>
-                        <div>
-                            <p>【限时特卖|27卷整箱维达经典卷筒纸】维达蓝色经典卫卷4层140克×27卷</p>
+                <day-shopping></day-shopping>
+            </div>
+            <div>
+                <h1>9.9秒杀</h1>
+                <div class="seckil wid">
+                    <div class="seckil-time">
+                        <div class="seckil-time-today">
+                            <p>11-04 00:00</p>
+                            <h3>抢购中</h3>
                         </div>
-                        <p class="limitshopping">限时购</p>
-
+                        <div>
+                            <p>11-05 00:00</p>
+                            <h3>未开始</h3>
+                        </div>
+                    </div>
+                    <p>好货疯抢中</p>
+                    <div class="seckil-list">
+                        <seckil-list></seckil-list>
                     </div>
                 </div>
+            </div>
+            <div class="seckil-coupon">
+                <img src="https://haitao.nosdn1.127.net/1edccf8a-df6b-48c0-a06e-5dc64e2f617b--t_1563782500477_960_177.png?imageView&thumbnail=750x138&quality=80"/>
+            </div>
+            <div class="seckil-subvention">
+                <h1>新人限时补贴</h1>
             </div>
         </main>
     </div>
 </template>
 
 <script>
+    import dayShopping from '../../../components/day-shopping'
+    import seckilList from '../../../components/seckil-list'
     export default {
-        name: "limit-seckil"
+        name: "limit-seckil",
+        components:{
+            dayShopping,
+            seckilList
+        }
     }
 </script>
 
@@ -48,13 +67,13 @@
         top: 0.1rem;
         right: 0.15rem;
     }
-    .home img{
+    .home>img{
         margin-top: -0.05rem;
         width: 0.19rem;
         height: 0.22rem;
     }
     .login{
-        margin-left: 10px;
+        margin-left: 0.10rem;
         font-size: 0.10rem;
         margin-top: 1px;
         width: 0.36rem;
@@ -77,31 +96,52 @@
         text-align: center;
         background-image: url("../../../assets/images/seckil-bg.png");
     }
-    .day-shopping{
-        display: flex;
+    .wid{
         width: 3.55rem;
-        height: 1.3rem;
         margin: 0 auto;
         background-color: white;
+        border-radius: 0.05rem;
     }
-    .day-shopping img{
-        width: 1.3rem;
-        height: 1.3rem;
+    .seckil-time{
+        display: flex;
+        padding: 0.06rem 0;
+        color: #666666;
     }
-    .day-shopping-list{
-        width: 2.05rem;
-        margin-left: 0.1rem;
+    .seckil-time>div{
+        flex: 1;
+        text-align: center;
     }
-    .day-shopping-list h2{
+    .seckil-time-today{
+        border-right: 1px solid rgb(230,230,230);
+        color: #e30202;
+    }
+    .seckil-time-today h3{
+        color: white;
+        background-color: rgb(227, 2, 2);
+        width: 0.55rem;
+        height: 0.18rem;
+        line-height: 0.18rem;
+        border-radius: 0.24rem;
+        margin: 0 auto;
+    }
+    .seckil>p{
+        width: 3.45rem;
+        height: 0.25rem;
+        line-height: 0.25rem;
+        padding-left: 0.12rem;
+        border: 0.005rem solid #E6E6E6;
+        border-left-width: 0;
+        border-radius: 0 0.36rem 0.36rem 0;
+        background-color: #fafafa;
+    }
+    .seckil-list{
+        overflow: auto;
+        padding-top: 0.1rem;
+        padding-left: 0.06rem;
+    }
+    /*.seckil-list::-webkit-scrollbar {display:none}*/
+    main>div>img{
+        width: 100%;
         margin-top: 0.08rem;
-        font-size: 0.15rem;
-        font-weight: bold;
-    }
-    .day-shopping-list>div{
-        margin-top: 0.07rem;
-        margin-bottom: 0.05rem;
-    }
-    .day-shopping-list>div>p{
-        font-size: 0.14rem;
     }
 </style>

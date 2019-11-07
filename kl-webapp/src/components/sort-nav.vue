@@ -17,7 +17,7 @@
                     sortNav:[
                         {
                             name:"美容彩妆",
-                            url:'#/'
+                            url:'#/main/sort/sortHome'
                         },
                         {
                             name:"奶粉/纸尿裤",
@@ -116,12 +116,10 @@
         font-size: 0.14rem;
     }
     .click{
-        /*color: red;*/
         background-image: -webkit-gradient(linear,right top,left top,from(red),to(#ff3264));
         background-image: -webkit-linear-gradient(right,red,#ff3264);
         background-image: linear-gradient(-90deg,red,#ff3264);
         border-radius: 25px;
-        font-family: PingFangSC-Regular;
         font-size: 14px;
         color: #fff;
         letter-spacing: 0;

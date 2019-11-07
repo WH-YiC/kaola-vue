@@ -1,7 +1,7 @@
 <template>
     <div class="footer">
         <a :href="tab.url" :key="index" v-for="(tab,index) in footerNav.tabs" @click="handleClick(index)">
-            <img :src="current===index?tab.activePic:tab.normalPic">
+            <img :src="current===index?tab.activePic:tab.normalPic"/>
         </a>
     </div>
 </template>
@@ -49,7 +49,7 @@
             }
         },
         methods:{
-            handleClick(index){
+            async handleClick(index){
                 this.current=index;
             }
         }

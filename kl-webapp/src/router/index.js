@@ -49,13 +49,13 @@ let router = new VueRouter({
 // // 全局路由guard     前置guard user->main->login
 // router.beforeEach((to,from,next)=>{
 //     // to from $route
-//     // let token = localStorage.getItem('token')
+//     let token = localStorage.getItem('token')
 //     next()
-//     // if(token){
-//     //     next('/main')
-//     // }else {
-//     //     next('/login')
-//     // }
+//     if(token){
+//         next('/main')
+//     }else {
+//         next('/login')
+//     }
 // })
 //
 // // eslint-disable-next-line no-unused-vars

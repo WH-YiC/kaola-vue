@@ -89,7 +89,7 @@
     .home-list>a{
         flex: 1;
     }
-    .home-list img{
+    .home-list>img,.home-list img{
         width: 100%;
     }
 </style>
