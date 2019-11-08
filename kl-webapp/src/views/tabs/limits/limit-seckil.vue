@@ -35,9 +35,6 @@
             <div class="seckil-coupon">
                 <img src="https://haitao.nosdn1.127.net/1edccf8a-df6b-48c0-a06e-5dc64e2f617b--t_1563782500477_960_177.png?imageView&thumbnail=750x138&quality=80"/>
             </div>
-            <div class="seckil-subvention">
-                <h1>新人限时补贴</h1>
-            </div>
         </main>
     </div>
 </template>

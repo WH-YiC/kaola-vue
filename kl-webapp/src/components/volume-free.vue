@@ -28,8 +28,8 @@
 <style scoped>
     h1{
         height: 0.5rem;
-        line-height: 0.5rem;
         color: white;
+        line-height: 0.5rem;
         font-size: 0.19rem;
         font-weight: bold;
         text-align: center;
@@ -69,7 +69,6 @@
     }
     .volume-list-price{
         position: relative;
-        padding-bottom: 0.1rem;
         padding: 0 0.08rem 0.08rem;
         font-size: 0.16rem;
     }
