@@ -1,6 +1,6 @@
 <template>
     <div class="limit-footer">
-        <a :href="t.lurl" :key="index" v-for="(t,index) in footerNav.limitTabs" @click="handleClick(index)">
+        <a :href="t.lurl" :key="index" v-for="(t,index) in data" @click="handleClick(index)">
             <img :src="lcurrent===index?t.activePic:t.normalPic">
         </a>
     </div>
@@ -9,36 +9,37 @@
 <script>
     export default {
         name: "limit-footer",
+        props:["data"],
         data(){
             return{
-                footerNav:{
-                    limitTabs:[
-                        {
-                            name:"限时购",//limit-limit
-                            normalPic:'./images/limit-limit.png',
-                            activePic:'./images/limit-limit-active.png',
-                            lurl:'#/main/limit/limited'
-                        },
-                        {
-                            name:"品牌闪购",//limit-shop
-                            normalPic:'./images/limit-shop.png',
-                            activePic:'./images/limit-shop-active.png',
-                            lurl:'#/main/limit/limitShop'
-                        },
-                        {
-                            name:"超值量贩",//limit-volume
-                            normalPic:'./images/limit-volume.png',
-                            activePic:'./images/limit-volume-active.png',
-                            lurl:'#/main/limit/limitVolume'
-                        },
-                        {
-                            name:"9.9秒杀",//limit-seckil
-                            normalPic:'./images/limit-seckil.png',
-                            activePic:'./images/limit-seckil-active.png',
-                            lurl:'#/main/limit/limitSeckil'
-                        }
-                    ]
-                },
+                // footerNav:{
+                //     limitTabs:[
+                //         {
+                //             name:"限时购",//limit-limit
+                //             normalPic:'./images/limit-limit.png',
+                //             activePic:'./images/limit-limit-active.png',
+                //             lurl:'#/main/limit/limited'
+                //         },
+                //         {
+                //             name:"品牌闪购",//limit-shop
+                //             normalPic:'./images/limit-shop.png',
+                //             activePic:'./images/limit-shop-active.png',
+                //             lurl:'#/main/limit/limitShop'
+                //         },
+                //         {
+                //             name:"超值量贩",//limit-volume
+                //             normalPic:'./images/limit-volume.png',
+                //             activePic:'./images/limit-volume-active.png',
+                //             lurl:'#/main/limit/limitVolume'
+                //         },
+                //         {
+                //             name:"9.9秒杀",//limit-seckil
+                //             normalPic:'./images/limit-seckil.png',
+                //             activePic:'./images/limit-seckil-active.png',
+                //             lurl:'#/main/limit/limitSeckil'
+                //         }
+                //     ]
+                // },
                 lcurrent:0
             }
         },

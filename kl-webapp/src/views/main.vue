@@ -1,7 +1,7 @@
 <template>
     <div>
         <router-view class="home"></router-view>
-        <kl-footer></kl-footer>
+        <kl-footer :data="data"></kl-footer>
     </div>
 
 </template>
@@ -22,9 +22,7 @@
         methods:{
            async _initData(){
                let a = await dataApi.getData();
-               this.data = a;
-               // // eslint-disable-next-line no-console
-               // console.log(this.data)
+               this.data = a.footerNav;
            }
         },
         beforeMount() {

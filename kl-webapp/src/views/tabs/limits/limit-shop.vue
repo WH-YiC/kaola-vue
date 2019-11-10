@@ -4,7 +4,7 @@
             <limit-shop-nav @lsnindex="lsnindex"></limit-shop-nav>
         </header>
         <main>
-            <limitShopRecommend v-if="num===1"></limitShopRecommend>
+            <limit-shop-recommend :data="data" v-if="num===1"></limit-shop-recommend>
             <limit-shop-beauty v-else-if="num===2"></limit-shop-beauty>
             <limit-shop-movement v-else-if="num===3"></limit-shop-movement>
             <limit-shop-bag v-else-if="num===4"></limit-shop-bag>
@@ -16,25 +16,34 @@
 </template>
 
 <script>
-    import limitShopNav from '../../../components/limit-shop-nav'
-    import limitShopRecommend from './limit-shop/limit-shop-recommend'
-    import limitShopBeauty from './limit-shop/limit-shop-beauty'
-    import limitShopMovement from './limit-shop/limit-shop-movement'
-    import limitShopBag from './limit-shop/limit-shop-bag'
-    import limitShopInfant from './limit-shop/limit-shop-infant'
-    import limitShopFood from './limit-shop/limit-shop-food'
-    import limitShopDigital from './limit-shop/limit-shop-digital'
+    import dataApi from "../../../api/dataApi";
+    import limitShopNav from '../../../components/limit-shop/limit-shop-nav'
+    import limitShopRecommend from '../../../components/limit-shop/limit-shop-recommend'
+    import limitShopBeauty from '../../../components/limit-shop/limit-shop-beauty'
+    import limitShopMovement from '../../../components/limit-shop/limit-shop-movement'
+    import limitShopBag from '../../../components/limit-shop/limit-shop-bag'
+    import limitShopInfant from '../../../components/limit-shop/limit-shop-infant'
+    import limitShopFood from '../../../components/limit-shop/limit-shop-food'
+    import limitShopDigital from '../../../components/limit-shop/limit-shop-digital'
     export default {
         name: "limit-shop",
         data(){
             return{
-                num:1
+                num:1,
+                data:{}
             }
         },
         methods:{
             lsnindex(i){
                 this.num = i;
+            },
+            async _initData(){
+                let a = await dataApi.getData();
+                this.data = a.limit.limitShop;
             }
+        },
+        beforeMount() {
+            this._initData()
         },
         components:{
             limitShopNav,

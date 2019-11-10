@@ -5,12 +5,12 @@
                 <p>象印保温杯</p></div>
             <div class="login"><a href="#/main/my">登录/注册</a></div>
         </header>
-        <kl-banner></kl-banner>
+        <kl-banner :data="data.banner"></kl-banner>
         <img class="home-center-img" src="../../assets/images/home-center-nav.png"/>
-        <home-center-nav></home-center-nav>
+        <home-center-nav :data="data.homeNav"></home-center-nav>
         <img class="home-center-img" src="../../assets/images/home1.gif"/>
         <img class="home-center-img" src="../../assets/images/homeimg.png"/>
-        <home-center-img></home-center-img>
+        <home-center-img :data="data.homeNav2"></home-center-img>
         <div class="home-list">
             <a href="#"><img src="../../assets/images/home-list1-1.png"/></a>
             <a href="#"><img src="../../assets/images/home-list1-2.png"/></a>
@@ -26,15 +26,30 @@
 </template>
 
 <script>
-    import banner from '../../components/banner'
-    import homeCenterNav from '../../components/home-center-nav'
-    import homeCenterImg from '../../components/home-center-img'
+    import dataApi from "../../api/dataApi";
+    import banner from '../../components/home/banner'
+    import homeCenterNav from '../../components/home/home-center-nav'
+    import homeCenterImg from '../../components/home/home-center-img'
     export default {
         name: "home",
         components: {
             'klBanner':banner,
             homeCenterNav,
             homeCenterImg
+        },
+        data(){
+            return{
+                data:{}
+            }
+        },
+        methods:{
+            async _initData(){
+                let a = await dataApi.getData();
+                this.data = a.home;
+            }
+        },
+        beforeMount() {
+            this._initData()
         }
     }
 </script>

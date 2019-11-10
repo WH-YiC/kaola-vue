@@ -11,7 +11,7 @@
         <main>
             <div>
                 <h1>今日必抢</h1>
-                <day-shopping></day-shopping>
+                <day-shopping :data="data.dayshopping"></day-shopping>
             </div>
             <div>
                 <h1>9.9秒杀</h1>
@@ -28,7 +28,7 @@
                     </div>
                     <p>好货疯抢中</p>
                     <div class="seckil-list">
-                        <seckil-list></seckil-list>
+                        <seckil-list :data="data.seckilList"></seckil-list>
                     </div>
                 </div>
             </div>
@@ -40,13 +40,29 @@
 </template>
 
 <script>
-    import dayShopping from '../../../components/day-shopping'
-    import seckilList from '../../../components/seckil-list'
+    import dataApi from "../../../api/dataApi";
+    import dayShopping from '../../../components/limit-seckil/day-shopping'
+    import seckilList from '../../../components/limit-seckil/seckil-list'
     export default {
         name: "limit-seckil",
         components:{
             dayShopping,
             seckilList
+        },
+        data(){
+            return{
+                num:0,
+                data:{}
+            }
+        },
+        methods:{
+            async _initData(){
+                let a = await dataApi.getData();
+                this.data = a.limit.limitSeckil;
+            }
+        },
+        beforeMount() {
+            this._initData()
         }
     }
 </script>

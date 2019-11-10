@@ -104,7 +104,7 @@
                     <img src="../../assets/images/my-list4-3.png"/>
                     <span>假一赔十</span>
                     <img src="../../assets/images/my-list4-4.png"/>
-                    <span class="pos">售后无忧</span>
+                    <span>售后无忧</span>
                 </div>
                 <div class="my-promise-more">
                     <a href="#">查看详情</a>
@@ -237,22 +237,17 @@
         padding-right: 0.07rem;
         color: #999999;
     }
-    .pos{
-        position: absolute;
-        bottom: -0.08rem;
-        right: 0.72rem;
-    }
     .my-promise-more{
-        width: 60px;
-        height: 18px;
+        width: 0.60rem;
+        height: 0.18rem;
         position: absolute;
-        right: 9px;
-        bottom: 9px;
+        right: 0;
+        bottom: 0.09rem;
         background-image: linear-gradient(270deg,#ff4e77,red);
-        border-radius: 10px;
-        font-size: 11px;
+        border-radius: 0.10rem;
+        font-size: 0.11rem;
         text-align: center;
-        line-height: 18px;
+        line-height: 0.18rem;
     }
     .my-promise-more>a{
         color: white;

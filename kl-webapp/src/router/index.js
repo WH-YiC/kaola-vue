@@ -11,7 +11,7 @@ import limitShop from '../views/tabs/limits/limit-shop'
 import limitVolume from '../views/tabs/limits/limit-volume'
 import limitSeckil from '../views/tabs/limits/limit-seckil'
 
-import sorthome from '../views/tabs/sort/sort-home'
+
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 let router = new VueRouter({
@@ -26,11 +26,7 @@ let router = new VueRouter({
             //子路由
             children:[
                 {path:'',component:home},
-                {path:'sort',component:sort,
-                    children:[
-                        {path:'sorthome',component:sorthome}
-                    ]
-                },
+                {path:'sort',component:sort},
                 {path:'limit',component:limit,
                     children:[
                         {path:'limited',component:limited},
