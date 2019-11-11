@@ -1,19 +1,19 @@
 <template>
     <div>
         <router-view class="home"></router-view>
-        <kl-footer :data="data"></kl-footer>
+<!--        <kl-footer :data="data"></kl-footer>-->
     </div>
 
 </template>
 
 <script>
     import dataApi from "../api/dataApi";
-    import footer from '../components/footer'
+    // import footer from '../components/footer'
     export default {
         name: "kmain",
-        components: {
-            'kl-footer':footer
-        },
+        // components: {
+        //     'kl-footer':footer
+        // },
         data(){
           return{
               data:[]

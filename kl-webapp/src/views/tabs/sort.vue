@@ -2,11 +2,13 @@
     <div class="sort">
         <sort-nav @sn="sn" :data="data.sortNav" class="sort-nav"></sort-nav>
         <sort-home :data="data.sortList[num]" class="sort-router"></sort-home>
+        <kl-footer :number="number"></kl-footer>
     </div>
 </template>
 
 <script>
     import dataApi from "../../api/dataApi";
+    import footer from '../../components/footer';
     import sortNav from '../../components/sort/sort-nav'
     import sortHome from '../../components/sort/sort-home'
     export default {
@@ -14,6 +16,7 @@
         data(){
             return{
                 num:0,
+                number:1,
                 data:{}
                 // sort:{
                 //     sortNav:["美容彩妆","奶粉/纸尿裤","母婴专区","营养保健","数码家电","个人洗护","服饰鞋靴","运动户外","手表配饰","轻奢","家居生活","环球美食","全球工厂店", "海外旗舰","网易严选","海外商超","生鲜", "充值中心","宠物生活"],
@@ -4632,11 +4635,12 @@
         },
         components:{
             sortNav,
-            sortHome
+            sortHome,
+            'kl-footer':footer
         },
         methods:{
             sn(index){
-                this.num=index;
+                this.num=parseInt(index);
             },
             async _initData(){
                 let a = await dataApi.getData();

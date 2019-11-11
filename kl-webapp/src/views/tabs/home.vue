@@ -11,7 +11,7 @@
                 <a v-else href="#/main/my" class="login-a">登录/注册</a>
             </div>
         </header>
-        <kl-banner :data="data.banner"></kl-banner>
+        <kl-banner></kl-banner>
         <img class="home-center-img" src="../../assets/images/home-center-nav.png"/>
         <home-center-nav :data="data.homeNav"></home-center-nav>
         <img class="home-center-img" src="../../assets/images/home1.gif"/>
@@ -28,11 +28,14 @@
             <a href="#"><img src="../../assets/images/home-list2-3.png"/></a>
             <a href="#"><img src="../../assets/images/home-list2-4.png"/></a>
         </div>
+
+        <kl-footer :number="number"></kl-footer>
     </div>
 </template>
 
 <script>
     import dataApi from "../../api/dataApi";
+    import footer from '../../components/footer';
     import banner from '../../components/home/banner'
     import homeCenterNav from '../../components/home/home-center-nav'
     import homeCenterImg from '../../components/home/home-center-img'
@@ -41,11 +44,13 @@
         components: {
             'klBanner':banner,
             homeCenterNav,
-            homeCenterImg
+            homeCenterImg,
+            'kl-footer':footer
         },
         data(){
             return{
                 name:localStorage.getItem('token'),
+                number:0,
                 data:{}
             }
         },

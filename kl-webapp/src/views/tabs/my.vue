@@ -111,15 +111,21 @@
                 </div>
             </div>
         </main>
+        <kl-footer :number="number"></kl-footer>
     </div>
 </template>
 
 <script>
+    import footer from '../../components/footer';
     export default {
         name: "my",
+        components:{
+            'kl-footer':footer
+        },
         data(){
             return{
-                name:(localStorage.getItem('token')).substring(7,11)
+                name:(localStorage.getItem('token')).substring(7,11),
+                number:4
             }
         }
     }

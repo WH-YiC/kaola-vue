@@ -1,17 +1,19 @@
 <template>
     <div class="limit-footer">
-        <a :href="t.lurl" :key="index" v-for="(t,index) in data" @click="handleClick(index)">
-            <img :src="lcurrent===index?t.activePic:t.normalPic">
+        <a :href="t.lurl" :key="index" v-for="(t,index) in data">
+            <img :src="current===index?t.activePic:t.normalPic">
         </a>
     </div>
 </template>
 
 <script>
+    import dataApi from "../api/dataApi";
     export default {
         name: "limit-footer",
-        props:["data"],
+        props:["current"],
         data(){
             return{
+                data:{},
                 // footerNav:{
                 //     limitTabs:[
                 //         {
@@ -40,13 +42,16 @@
                 //         }
                 //     ]
                 // },
-                lcurrent:0
             }
         },
         methods:{
-            handleClick(index){
-                this.lcurrent=index;
+            async _initData(){
+                let a = await dataApi.getData();
+                this.data = a.limitfooter;
             }
+        },
+        beforeMount() {
+            this._initData()
         }
     }
 </script>

@@ -40,6 +40,7 @@
                 <img src="https://haitao.nosdn1.127.net/1edccf8a-df6b-48c0-a06e-5dc64e2f617b--t_1563782500477_960_177.png?imageView&thumbnail=750x138&quality=80"/>
             </div>
         </main>
+        <limit-footer :current="number"></limit-footer>
     </div>
 </template>
 
@@ -47,15 +48,18 @@
     import dataApi from "../../../api/dataApi";
     import dayShopping from '../../../components/limit-seckil/day-shopping'
     import seckilList from '../../../components/limit-seckil/seckil-list'
+    import limitFooter from '../../../components/limit-footer'
     export default {
         name: "limit-seckil",
         components:{
             dayShopping,
-            seckilList
+            seckilList,
+            limitFooter
         },
         data(){
             return{
                 num:0,
+                number:3,
                 name:localStorage.getItem('token'),
                 data:{}
             }

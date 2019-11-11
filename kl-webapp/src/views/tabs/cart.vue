@@ -19,15 +19,22 @@
                 <div><a href="#/">去逛逛</a></div>
             </div>
         </main>
+
+        <kl-footer :number="number"></kl-footer>
     </div>
 </template>
 
 <script>
+    import footer from '../../components/footer';
     export default {
         name: "cart",
+        components:{
+            'kl-footer':footer
+        },
         data(){
             return{
-                name:localStorage.getItem('token')
+                name:localStorage.getItem('token'),
+                number:3
             }
         }
     }

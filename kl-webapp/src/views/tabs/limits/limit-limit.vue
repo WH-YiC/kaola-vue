@@ -8,6 +8,7 @@
             <limit-limit-shopping :data="data[num]" v-else-if="num===3"></limit-limit-shopping><!--抢购进行中-->
             <limit-limit-to-shop :data="data[num]" v-else-if="num>3"></limit-limit-to-shop><!--即将开抢-->
         </main>
+        <limit-footer :current="number"></limit-footer>
     </div>
 </template>
 
@@ -17,17 +18,20 @@
     import limitLimitShopped from '../../../components/limit-limit/limit-limit-shopped'
     import limitLimitShopping from '../../../components/limit-limit/limit-limit-shopping'
     import limitLimitToShop from '../../../components/limit-limit/limit-limit-to-shop'
+    import limitFooter from '../../../components/limit-footer'
     export default {
         name: "limit-limit",
         components:{
             limitLimitNav,
             limitLimitShopped,
             limitLimitShopping,
-            limitLimitToShop
+            limitLimitToShop,
+            limitFooter
         },
         data(){
             return{
                 num:0,
+                number:0,
                 data:{}
                 // limitLimit: [
                 //         [

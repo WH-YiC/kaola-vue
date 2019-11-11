@@ -1,15 +1,16 @@
 <template>
     <div class="footer">
-        <a :href="tab.url" :key="index" v-for="(tab,index) in data" @click="handleClick(index)">
-            <img :src="current===index?tab.activePic:tab.normalPic"/>
+        <a :href="tab.url" :key="index" v-for="(tab,index) in data">
+            <img :src="number===index?tab.activePic:tab.normalPic"/>
         </a>
     </div>
 </template>
 
 <script>
+    import dataApi from "../api/dataApi";
     export default {
         name: "kfooter",
-        props:["data"],
+        props:["number"],
         data(){
             return{
                 // footerNav:{
@@ -46,13 +47,17 @@
                 //         }
                 //     ]
                 // },
-                current:0
+                data:[]
             }
         },
         methods:{
-            handleClick(index){
-                this.current=index;
+            async _initData(){
+                let a = await dataApi.getData();
+                this.data = a.footerNav;
             }
+        },
+        beforeMount() {
+            this._initData()
         }
     }
 </script>

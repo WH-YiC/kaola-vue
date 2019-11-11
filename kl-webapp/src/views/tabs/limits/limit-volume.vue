@@ -14,17 +14,20 @@
         <main>
             <volume-free :key="index" :data="s" v-for="(s,index) in data"></volume-free>
         </main>
+        <limit-footer :current="number"></limit-footer>
     </div>
 </template>
 
 <script>
     import dataApi from "../../../api/dataApi";
     import volumeFree from '../../../components/volume-free'
+    import limitFooter from '../../../components/limit-footer'
     export default {
         name: "limit-volume",
         data(){
             return{
                 name:localStorage.getItem('token'),
+                number:2,
                 data:[]
                 // volumeList:{
                 //     list:[
@@ -174,7 +177,8 @@
             }
         },
         components:{
-            volumeFree
+            volumeFree,
+            limitFooter
         },
         methods:{
             async _initData(){

@@ -12,6 +12,7 @@
             <limit-shop-food v-else-if="num===6"></limit-shop-food>
             <limit-shop-digital v-else-if="num===7"></limit-shop-digital>
         </main>
+        <limit-footer :current="number"></limit-footer>
     </div>
 </template>
 
@@ -25,11 +26,13 @@
     import limitShopInfant from '../../../components/limit-shop/limit-shop-infant'
     import limitShopFood from '../../../components/limit-shop/limit-shop-food'
     import limitShopDigital from '../../../components/limit-shop/limit-shop-digital'
+    import limitFooter from '../../../components/limit-footer'
     export default {
         name: "limit-shop",
         data(){
             return{
                 num:1,
+                number:1,
                 data:{}
             }
         },
@@ -53,7 +56,8 @@
             limitShopBag,
             limitShopInfant,
             limitShopFood,
-            limitShopDigital
+            limitShopDigital,
+            limitFooter
         }
     }
 </script>
