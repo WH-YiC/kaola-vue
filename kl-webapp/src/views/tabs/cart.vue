@@ -13,7 +13,7 @@
             </div>
         </header>
         <main>
-            <div>
+            <div class="empty">
                 <img src="../../assets/images/cart.png"/>
                 <p>购物车空空如也，赶紧去逛逛吧！</p>
                 <div><a href="#/">去逛逛</a></div>
@@ -65,20 +65,20 @@
         border: 1px solid #e31436;
         border-radius: 3px;
     }
-    main>div{
+    .empty{
         text-align: center;
         padding-top: 1.86rem;
         font-size: 0.15rem;
     }
-    main>div>img{
+    .empty>img{
         width: 1rem;
         height: 1rem;
         margin: 0 auto;
     }
-    main>div>p{
+    .empty>p{
         margin: 0.2rem 0 0.3rem;
     }
-    main>div>div>a{
+    .empty>div>a{
         display: inline-block;
         width: 1.2rem;
         height: 0.4rem;
