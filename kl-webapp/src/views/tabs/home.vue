@@ -2,8 +2,14 @@
     <div class="home">
         <header>
             <div class="search">
-                <p>象印保温杯</p></div>
-            <div class="login"><a href="#/main/my">登录/注册</a></div>
+                <p>象印保温杯</p>
+            </div>
+            <div class="login">
+                <a href="#/main/my" v-if="name">
+                    <img src="../../assets/images/userimg.png" style="width: 0.24rem;margin: 0 auto;"/>
+                </a>
+                <a v-else href="#/main/my" class="login-a">登录/注册</a>
+            </div>
         </header>
         <kl-banner :data="data.banner"></kl-banner>
         <img class="home-center-img" src="../../assets/images/home-center-nav.png"/>
@@ -39,6 +45,7 @@
         },
         data(){
             return{
+                name:localStorage.getItem('token'),
                 data:{}
             }
         },
@@ -90,10 +97,12 @@
         padding: 0.04rem;
         text-align: center;
         color: #e31436;
-        border: 1px solid;
-        border-radius: 0.03rem;
         vertical-align: top;
         font-size: 10px;
+    }
+    .login-a{
+        border: 1px solid;
+        border-radius: 0.03rem;
     }
     .home-center-img{
         width: 100%;

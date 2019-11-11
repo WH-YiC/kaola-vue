@@ -5,7 +5,7 @@
             <img src="../../assets/images/my-bg.png" />
             <div>
                 <p><img src="../../assets/images/userimg.png" /></p>
-                <h1>手机用户3856</h1>
+                <h1>手机用户<span>{{name}}</span></h1>
             </div>
         </header>
         <main>
@@ -116,7 +116,12 @@
 
 <script>
     export default {
-        name: "my"
+        name: "my",
+        data(){
+            return{
+                name:(localStorage.getItem('token')).substring(7,11)
+            }
+        }
     }
 </script>
 

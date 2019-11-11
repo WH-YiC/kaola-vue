@@ -4650,7 +4650,7 @@ module.exports={
                             ]
                         }
                     ]//宠物生活
-                ],
+                ]
             },
             limitfooter:[
                 {
@@ -5083,92 +5083,91 @@ module.exports={
                     }
                 ],
                     shopRecommend:[
-                    {
-                        bgimg:'background-image:url(https://haitao.nos.netease.com/1572493531758%E5%85%B0%E8%8A%9D.jpg?imageView&thumbnail=710x0&quality=80&type=webp)',
-                        logo:'https://haitao.nosdn1.127.net/ii01qihl5_300_300.jpg?imageView&thumbnail=0x70&quality=80&type=webp',
-                        name:'LΛNEIGE 兰芝',
-                        title:'油皮两件套248',
-                        time:'28',
-                        product:[
-                            {
-                                img:'https://haitao.nos.netease.com/de12ce0374164d1e819e92946dd7b50a1572400311929k2cmjplx12316.jpg?imageView&thumbnail=215x215&quality=80&type=webp',
-                                title:'包税',
-                                price:'￥248',
-                                delprice:'￥439'
-                            },
-                            {
-                                img:'https://haitao.nos.netease.com/75d5dd81a47646deb5f68d751e3aee8d1569207644125k0vtpr7f10930.jpg?imageView&thumbnail=215x215&quality=80&type=webp',
-                                title:'满2件减30',
-                                price:'￥149',
-                                delprice:'￥270'
-                            },
-                            {
-                                img:'https://haitao.nosdn1.127.net/270137740233451e99a27ef4ab98e6c91521683385319jf1uzyky11784.jpg?imageView&thumbnail=215x215&quality=80&type=webp',
-                                title:'满2件减30',
-                                price:'￥149',
-                                delprice:'￥198'
-                            }
-                        ]
+                        {
+                            bgimg:'background-image:url(https://haitao.nos.netease.com/1572493531758%E5%85%B0%E8%8A%9D.jpg?imageView&thumbnail=710x0&quality=80&type=webp)',
+                            logo:'https://haitao.nosdn1.127.net/ii01qihl5_300_300.jpg?imageView&thumbnail=0x70&quality=80&type=webp',
+                            name:'LΛNEIGE 兰芝',
+                            title:'油皮两件套248',
+                            time:'28',
+                            product:[
+                                {
+                                    img:'https://haitao.nos.netease.com/de12ce0374164d1e819e92946dd7b50a1572400311929k2cmjplx12316.jpg?imageView&thumbnail=215x215&quality=80&type=webp',
+                                    title:'包税',
+                                    price:'￥248',
+                                    delprice:'￥439'
+                                },
+                                {
+                                    img:'https://haitao.nos.netease.com/75d5dd81a47646deb5f68d751e3aee8d1569207644125k0vtpr7f10930.jpg?imageView&thumbnail=215x215&quality=80&type=webp',
+                                    title:'满2件减30',
+                                    price:'￥149',
+                                    delprice:'￥270'
+                                },
+                                {
+                                    img:'https://haitao.nosdn1.127.net/270137740233451e99a27ef4ab98e6c91521683385319jf1uzyky11784.jpg?imageView&thumbnail=215x215&quality=80&type=webp',
+                                    title:'满2件减30',
+                                    price:'￥149',
+                                    delprice:'￥198'
+                                }
+                            ]
 
-                    }
-                    // ,
-                    // {
-                    //     bgimg:'',
-                    //     logo:'',
-                    //     name:'',
-                    //     title:'',
-                    //     time:'',
-                    //     product:[
-                    //         {
-                    //             img:'',
-                    //             title:'',
-                    //             price:'',
-                    //             delprice:''
-                    //         },
-                    //         {
-                    //             img:'',
-                    //             title:'',
-                    //             price:'',
-                    //             delprice:''
-                    //         },
-                    //         {
-                    //             img:'',
-                    //             title:'',
-                    //             price:'',
-                    //             delprice:''
-                    //         }
-                    //     ]
-                    //
-                    // },
-                    // {
-                    //     bgimg:'',
-                    //     logo:'',
-                    //     name:'',
-                    //     title:'',
-                    //     time:'',
-                    //     product:[
-                    //         {
-                    //             img:'',
-                    //             title:'',
-                    //             price:'',
-                    //             delprice:''
-                    //         },
-                    //         {
-                    //             img:'',
-                    //             title:'',
-                    //             price:'',
-                    //             delprice:''
-                    //         },
-                    //         {
-                    //             img:'',
-                    //             title:'',
-                    //             price:'',
-                    //             delprice:''
-                    //         }
-                    //     ]
-                    //
-                    // }
-                ]
+                        },
+                        {
+                            bgimg:'background-image:url(https://haitao.nosdn1.127.net/d656636a-d6ce-443e-8e66-36b06407485b_960_480.jpg?imageView&thumbnail=710x0&quality=80&type=webp)',
+                            logo:'https://haitao.nosdn1.127.net/1btbadu1946_300_300.jpg?imageView&thumbnail=0x70&quality=80&type=webp',
+                            name:'雅诗兰黛',
+                            title:'红石榴水200元',
+                            time:'09',
+                            product:[
+                                {
+                                    img:'https://pop.nosdn.127.net/81870369434c4555831de6ff33e7d64d_0_0.null?imageView&thumbnail=215x215&quality=80&type=webp',
+                                    title:'满2件减10',
+                                    price:'200',
+                                    delprice:'￥420'
+                                },
+                                {
+                                    img:'https://pop.nosdn.127.net/5c315dd4-f03e-4296-aa30-a8140cce176a?imageView&thumbnail=215x215&quality=80&type=webp',
+                                    title:'满199元换购',
+                                    price:'319',
+                                    delprice:'￥499'
+                                },
+                                {
+                                    img:'https://pop.nosdn.127.net/0db5932c-f3d7-4512-b2c9-0478c74d50c9?imageView&thumbnail=215x215&quality=80&type=webp',
+                                    title:'满199元换购',
+                                    price:'259',
+                                    delprice:'￥499'
+                                }
+                            ]
+
+                        },
+                        {
+                            bgimg:'background-image:url(https://haitao.nosdn1.127.net/d7bff33f-7ebc-421b-8deb-22c9370198ea_960_480.png?imageView&thumbnail=710x0&quality=80)',
+                            logo:'https://haitao.nos.netease.com/j0waystf41_300_300.jpg?imageView&thumbnail=0x70&quality=80&type=webp',
+                            name:'资生堂',
+                            title:'红色蜜露水仅388',
+                            time:'09',
+                            product:[
+                                {
+                                    img:'https://pop.nosdn.127.net/43e400f1-dc93-4cca-9ee0-ba98db9ffd3e?imageView&thumbnail=215x215&quality=80&type=webp',
+                                    title:'满2件减10',
+                                    price:'49',
+                                    delprice:'￥105'
+                                },
+                                {
+                                    img:'https://pop.nosdn.127.net/1f0ce773-bd31-4329-be7e-139489ad6f08?imageView&thumbnail=215x215&quality=80&type=webp',
+                                    title:'满2件减10',
+                                    price:'75',
+                                    delprice:'￥99'
+                                },
+                                {
+                                    img:'https://pop.nosdn.127.net/1b8647ea-bb67-4386-8e00-68254aa0c204?imageView&thumbnail=215x215&quality=80&type=webp',
+                                    title:'满2件减10',
+                                    price:'79',
+                                    delprice:'￥149'
+                                }
+                            ]
+
+                        }
+                    ]
                 },
                 limitVolume:[
                         {

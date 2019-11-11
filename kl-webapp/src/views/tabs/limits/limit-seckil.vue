@@ -3,9 +3,13 @@
         <header>
             <p>限时购—9块9秒杀</p>
             <div class="home-login">
-                <a class="home" href="#/"><img src="../../../assets/images/homeicon.png"/>
+                <a class="home" href="#/">
+                    <img src="../../../assets/images/homeicon.png"/>
                 </a>
-                <a class="login" href="#/main/my">登录</a>
+                <a class="login" href="#/main/my">
+                    <img v-if="name" src="../../../assets/images/userimg.png"/>
+                    <p v-else>登录</p>
+                </a>
             </div>
         </header>
         <main>
@@ -52,6 +56,7 @@
         data(){
             return{
                 num:0,
+                name:localStorage.getItem('token'),
                 data:{}
             }
         },
@@ -80,22 +85,24 @@
         top: 0.1rem;
         right: 0.15rem;
     }
-    .home>img{
-        margin-top: -0.05rem;
-        width: 0.19rem;
-        height: 0.22rem;
+    .home-login img{
+        width: 0.24rem;
+        margin-right: 0.10rem;
     }
     .login{
-        margin-left: 0.10rem;
-        font-size: 0.10rem;
         margin-top: 1px;
         width: 0.36rem;
         height: 0.2rem;
-        line-height: 0.2rem;
         text-align: center;
+        border-radius: 3px;
+    }
+    .login>p{
+        width: 0.36rem;
+        height: 0.2rem;
+        line-height: 0.2rem;
+        font-size: 0.10rem;
         color: #e31436;
         border: 1px solid #e31436;
-        border-radius: 3px;
     }
     main{
         background-color: #FF2852;

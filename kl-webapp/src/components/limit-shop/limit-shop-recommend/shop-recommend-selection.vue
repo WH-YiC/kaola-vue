@@ -9,7 +9,6 @@
             </div>
             <recommend-selection-list :data="s.product"></recommend-selection-list>
         </div>
-
     </div>
 </template>
 
@@ -27,13 +26,12 @@
 <style scoped>
     .selection{
         width: 3.55rem;
-        height: 3rem;
         margin: 0 auto;
     }
     .selection>div{
-        height: 1.23rem;
         background-size: 100%;
         padding-top: 0.12rem;
+        border-radius: 0.05rem;
     }
     .information{
         width: 1.85rem;
@@ -65,7 +63,6 @@
         top: 0.08rem;
         left: 0.75rem;
     }
-
     .selection>div>div>h2{
         padding-bottom: 0.06rem;
         padding-left: 0.06rem;

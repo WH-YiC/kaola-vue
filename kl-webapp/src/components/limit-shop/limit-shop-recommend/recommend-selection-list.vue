@@ -19,10 +19,12 @@
     .selection-list{
         width: 100%;
         margin: 0 auto;
-        padding: 0.09rem;
+        padding: 0.09rem 0.09rem 0;
+        margin-bottom: 0.09rem;
         display: flex;
         justify-content: space-between;
         background-color: white;
+        border-radius: 0 0 0.05rem 0.05rem;
     }
     .selection-list>div{
         margin-bottom: 0.1rem;

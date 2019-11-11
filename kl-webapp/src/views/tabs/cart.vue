@@ -3,9 +3,13 @@
         <header>
             <p>购物车&nbsp;(0)</p>
             <div class="home-login">
-                <a class="home" href="#/"><img src="../../assets/images/homeicon.png"/>
+                <a class="home" href="#/">
+                    <img src="../../assets/images/homeicon.png"/>
                 </a>
-                <a class="login" href="#/main/my">登录</a>
+                <a href="#/main/my" v-if="name">
+                    <img src="../../assets/images/userimg.png" style="width: 0.24rem"/>
+                </a>
+                <a v-else class="login" href="#/main/my">登录</a>
             </div>
         </header>
         <main>
@@ -20,7 +24,12 @@
 
 <script>
     export default {
-        name: "cart"
+        name: "cart",
+        data(){
+            return{
+                name:localStorage.getItem('token')
+            }
+        }
     }
 </script>
 
@@ -43,9 +52,9 @@
     .home>img{
         width: 0.22rem;
         height: 0.22rem;
+        margin-right: 0.15rem;
     }
     .login{
-        margin-left: 0.15rem;
         font-size: 0.10rem;
         margin-top: 1px;
         width: 0.36rem;
